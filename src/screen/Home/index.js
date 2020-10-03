@@ -28,9 +28,9 @@ const Home = (props) => {
     const renderItem = (item, index) => {
         return (
             <View key={index} style={{ padding: 10 }}>
-                <Text>employee name : {item.employee_name}</Text>
-                <Text>employee salary : {item.employee_salary}</Text>
-                <Text>employee age : {item.employee_age}</Text>
+                <Text>employee first name : {item.first_name}</Text>
+                <Text>employee last name : {item.last_name}</Text>
+                <Text>employee email : {item.email}</Text>
             </View>
         )
     }
@@ -47,7 +47,7 @@ const Home = (props) => {
             {
                 props.employeeLoading
                     ?
-                    <ActivityIndicator size="large" color="#00ff00" />
+                    <ActivityIndicator size="large" color="#000" />
                     :
                     <View style={{flex:1}}>
                         <Text style={{fontSize: 20,textAlign: 'center', marginBottom: 10}}>Employee List</Text>

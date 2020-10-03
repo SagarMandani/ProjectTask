@@ -5,7 +5,7 @@ export const getEmployee = () => {
     return async (dispatch) => {
         try {
             dispatch({ type: types.GET_EMPLOYEE_LOADING, payload: true });
-            let response = await fetch('http://dummy.restapiexample.com/api/v1/employees', { method: 'GET' });
+            let response = await fetch('https://reqres.in/api/users', { method: 'GET' });
             let res = await response.json();
             dispatch({ type: types.GET_EMPLOYEE_LOADING, payload: false });
             if (response.status) {
